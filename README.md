@@ -2,9 +2,9 @@
 
 ## Overview
 
-The goal of this project is to develop a low-latency, closed-loop system that enables researchers at the Northwestern Institute on Complex Systems to conduct real-time experiments on firefly synchronization. Motivated by observations of synchronized flashing in fireflies from Thailand, the system is designed to investigate the emergence of collective behavior by measuring and modulating the system’s order parameter.
+The goal of this project is to develop a low-latency, closed-loop system that enables researchers to conduct real-time experiments on firefly synchronization.  The system is designed to investigate the emergence of collective behavior (sync) by measuring real swarm activity  in the field, in real-time, and adjusting the "synthetic" fireflies (LEDs) accordingly.
 
-The system integrates a high-speed camera to track individual firefly flashes and a real-time processing pipeline that analyzes this data and triggers LED responses with minimal delay. To achieve the required responsiveness, all core components responsible for flash detection and data processing are implemented in C++. This design decision ensures sub-10 millisecond latency, which is critical for responsively reacting to the natural flashing rhythms of the fireflies.
+The system integrates a high-speed camera to track individual firefly flashes and a real-time processing pipeline that analyzes these data and triggers LED responses with minimal delay. To achieve the required responsiveness, all core components responsible for flash detection and data processing are implemented in C++. This design decision ensures sub-10 millisecond latency, which is critical for responsively reacting to the natural flashing rhythms of the fireflies.
 
 To make experimentation accessible to researchers with limited programming experience, the experimental logic is exposed via a Python interface. Researchers can define and modify experiment protocols in Python without interacting directly with the C++ core, allowing for rapid iteration and ease of use while maintaining high system performance.
 
